@@ -1,0 +1,10 @@
+version: '2'
+services:
+  website:
+    container_name: inst-power_of_js
+    build:
+      context: ./
+    volumes:
+      - ./appcode:/var/www/html
+    ports:
+      - 8000:80
