@@ -1,0 +1,49 @@
+
+services:
+ ubuntu_cronos_container1:
+  container_name: cronos.109.199
+  image: ubuntu:cronosV1_web3
+  ports: 
+   - "80:80"
+  command: /bin/bash -c "/etc/startup.bat && /bin/bash"
+  tty: true
+  networks:
+   cronos_macvlan:
+    ipv4_address: 192.168.109.199
+
+#Duplicate this blk of code below for more challenges
+ ubuntu_cronos_container2:
+  container_name: cronos_80_200
+  image: ubuntu:cronosV1_web3
+  ports: 
+   - "80:80"
+#Command here is to auto run a startup.bat script to auto start services in the container when it is up
+#&& /bin/bash is issued to leave the container status as running and not exited
+  command: /bin/bash -c "/etc/startup.bat && /bin/bash"
+  tty: true
+  networks:
+   cronos_macvlan2:
+    ipv4_address: 192.168.80.200
+
+#Macvlan does not support internet access while IPVLAN does(might wanna consider)
+networks:
+ cronos_macvlan:
+  driver: macvlan
+  driver_opts:
+   parent: ens36
+  ipam:
+   driver: default
+   config:
+    - subnet: 192.168.109.0/24
+      ip_range: 192.168.109.253/24
+#When adding new network - its required to add new network adapter to be able to access the containers
+ cronos_macvlan2:
+  driver: macvlan
+#Add driver_opts according to ethernet interface name that points to that network
+  driver_opts:
+   parent: ens37
+  ipam:
+   driver: default
+   config:
+    - subnet: 192.168.80.0/24
+      ip_range: 192.168.80.253/24
