@@ -15,7 +15,8 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
       - add your new network adapter first in your vm
       - `driver_opts` add according to VM's ethernet interface name that points to your new network
       - `config` `subnet` change accordingly (we don't need to reserve any ip addresses actually so `ip_range` not that impt)
-  
+4. Pull my docker container image if needed
+   - `docker pull zcloudyx/ubuntu_apache2`
 
 
 ## Docker compose file (Networking)
