@@ -17,7 +17,8 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
       - `config` `subnet` change accordingly (we don't need to reserve any ip addresses actually so `ip_range` not that impt)
 4. Pull my docker container image if needed
    - `docker pull zcloudyx/ubuntu_apache2`
-
+5. Edit changes to `crontab -e` or `/var/spool/cron/crontabs` to auto run compose on reboot
+   - `@reboot sleep 60 && /usr/local/bin/docker-compose -f ~/compose-demo/docker-compose.yml up -d`
 
 ## Docker compose file (Networking)
 1. To understand networking watch 1. [NetworkChuck](https://www.youtube.com/watch?v=bKFMS5C4CG0&t=1202s&ab_channel=NetworkChuck) Else 2. The [Digital Life](https://www.youtube.com/watch?v=5grbXvV_DSk&ab_channel=TheDigitalLife)
