@@ -6,7 +6,7 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
 ## Instructions to replicate Setup
 1. Complete the docker-compose guide from digitalocean first(Just step 1) (Dir -> MP/docker-template/README.md > Environment Setup)
 2. Download/Pull my docker-compose.yml file
-3. Change my yml file according to your own needs [Compose Specification](https://docs.docker.com/compose/compose-file/)
+3. Change my yml file according to your own needs [(Compose Specification)](https://docs.docker.com/compose/compose-file/)
    - `image` include your own docker container image here
    - `ports` still unsure if there's a need to expose the port but export the port according to ur serivces
    - `command` it's necessary for our case and please include your own startup.bat file in your container to startup the services required for that challenge
@@ -23,6 +23,7 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
 ## Docker compose file (Networking)
 1. To understand networking watch 1. [NetworkChuck](https://www.youtube.com/watch?v=bKFMS5C4CG0&t=1202s&ab_channel=NetworkChuck) Else 2. The [Digital Life](https://www.youtube.com/watch?v=5grbXvV_DSk&ab_channel=TheDigitalLife)
 2. To understand the comparsion between docker run commands and docker compose file [Skip to 1:23](https://www.youtube.com/watch?v=MVIcrmeV_6c&ab_channel=TechWorldwithNana)
+3. Refer to [Compose Specification](https://docs.docker.com/compose/compose-file/) if needed
 
 ## Example of Macvlan in compose file
 ```
