@@ -6,8 +6,15 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
 ## Instructions to replicate Setup
 1. Complete the docker-compose guide from digitalocean first(Just step 1) (Dir -> MP/docker-template/README.md > Environment Setup)
 2. Download/Pull my docker-compose.yml file
-3. Change the yml file according to your own needs
-   - test
+3. Change my yml file according to your own needs [Compose Specification](https://docs.docker.com/compose/compose-file/)
+   - `image` include your own docker container image here
+   - `ports` still unsure if there's a need to expose the port but export the port according to ur serivces
+   - `command` it's necessary for our case and please include your own startup.bat file in your container to startup the services required for that challenge
+   - `networks` `ipv4_address` add according to the new network adapter added network in your vm
+   - `networks(top-level element(same level as services))`
+      - add your new network adapter first in your vm
+      - `driver_opts` add according to VM's ethernet interface name that points to your new network
+      - `config` `subnet` change accordingly (we don't need to reserve any ip addresses actually so `ip_range` not that impt)
   
 
 
