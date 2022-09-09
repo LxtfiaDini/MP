@@ -7,7 +7,7 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
 1. Complete the docker-compose guide from digitalocean first(Just step 1) (Dir -> MP/docker-template/README.md > Environment Setup)
 2. Download/Pull my docker-compose.yml file
 3. Change the yml file according to your own needs
-  - test
+   - test
   
 
 
