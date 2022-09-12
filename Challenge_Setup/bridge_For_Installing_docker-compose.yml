@@ -5,7 +5,8 @@ services:
   ports:
    - "9090:80"
   networks:
-   - ubuntu_cronosV1
+   ubuntu_cronosV1:
+    ipv4_address: 192.168.109.199
   command: /bin/bash -c "/etc/startup.bat && /bin/bash"
   tty: true
 
@@ -15,5 +16,5 @@ networks:
   ipam:
    driver: default
    config:
-    - subnet: 172.16.238.0/24
-      gateway: 172.16.238.1
+    - subnet: 192.168.109.0/24
+      ip_range: 192.168.109.253/24
