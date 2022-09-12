@@ -1,0 +1,19 @@
+services:
+ ubuntu_cronosV1_web:
+  container_name: testing_installing
+  image: ubuntu:cronosV1_web3
+  ports:
+   - "9090:80"
+  networks:
+   - ubuntu_cronosV1
+  command: /bin/bash -c "/etc/startup.bat && /bin/bash"
+  tty: true
+
+networks:
+ ubuntu_cronosV1:
+  driver: bridge
+  ipam:
+   driver: default
+   config:
+    - subnet: 172.16.238.0/24
+      gateway: 172.16.238.1
