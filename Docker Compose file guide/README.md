@@ -19,7 +19,7 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
       - `config` `subnet` change accordingly (we don't need to reserve any ip addresses actually so `ip_range` not that impt)
 4. Pull my docker container image if needed
 > **_NOTE:_**
->Best is you find our own images search up exisiting ones(Eg. [LAMP Stack docker container](https://hub.docker.com/r/mattrayner/lamp)) Or Convert CTF VM to container images 
+>Best is you find our own images by search up exisiting ones(Eg. [LAMP Stack docker container](https://hub.docker.com/r/mattrayner/lamp)) Or Convert CTF VM to container images 
    - `docker pull zcloudyx/ubuntu_apache2`
 5. Add this line to `crontab -e` or `/var/spool/cron/crontabs` (auto run compose on reboot)
    - `@reboot sleep 60 && /usr/local/bin/docker-compose -f ~/compose-demo/docker-compose.yml up -d`
