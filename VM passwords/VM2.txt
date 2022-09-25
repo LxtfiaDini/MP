@@ -1,0 +1,8 @@
+username: linuxadmin
+passwd: Password123
+
+ubuntu 
+username: root
+passwd: Password123
+
+pls contact @atreidessss on tele if there's any issue regarding VM2
