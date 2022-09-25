@@ -18,6 +18,8 @@ Ze Xiang (Zac) Ng, @@zzDFHJ8
       - `driver_opts` add according to VM's ethernet interface name that points to your new network
       - `config` `subnet` change accordingly (we don't need to reserve any ip addresses actually so `ip_range` not that impt)
 4. Pull my docker container image if needed
+> **_NOTE:_**
+>Best is you find our own images search up exisiting ones
    - `docker pull zcloudyx/ubuntu_apache2`
 5. Add this line to `crontab -e` or `/var/spool/cron/crontabs` (auto run compose on reboot)
    - `@reboot sleep 60 && /usr/local/bin/docker-compose -f ~/compose-demo/docker-compose.yml up -d`
