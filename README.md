@@ -3,7 +3,7 @@
 ## Author
 Ze Xiang (Zac) Ng, @@zzDFHJ8
 
-## Link to VMs
+## Download VMs here!!
 [onedrive](https://studenttpedu-my.sharepoint.com/:f:/g/personal/2004668f_student_tp_edu_sg/ErI2k26ywa5OhEfXKJAt6bEB8UXiSFigc3U_4SujIj2npw?e=XbaDKu)
 
 ## Architecture
