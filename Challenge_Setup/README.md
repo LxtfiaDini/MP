@@ -3,6 +3,8 @@
 ## Author
 Ze Xiang (Zac) Ng, @@zzDFHJ8
 
+> **_NOTE:_** 
+> Please test and understand what you are doing don't just blindly copy!!
 ## Instructions to replicate Setup
 1. Complete the docker-compose guide from digitalocean first(Just step 1) (Dir -> MP/docker-template/README.md > Environment Setup)
 2. Download/Pull my docker-compose.yml file
